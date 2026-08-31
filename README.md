@@ -5,9 +5,9 @@ Development Plan folder) into a daily cockpit: a **Today** view (deadlines,
 decision callouts, the day's tasks + standing dailies, admin items) and a
 **Week** view. Checkmarks persist in the browser via `localStorage`.
 
-- **Live:** https://daily-plan-9086a0.netlify.app
+- **Live:** https://leyes-daily-plan.netlify.app
 - **Repo:** https://github.com/donne4real/daily-plan (private)
-- **Netlify admin:** https://app.netlify.com/projects/daily-plan-9086a0
+- **Netlify admin:** https://app.netlify.com/projects/leyes-daily-plan
 - **Data:** `data/tasks.json` — the single source of truth for the site
 - **No framework, no build step** — plain HTML/CSS/JS; Netlify only runs the
   validator at deploy time
@@ -98,9 +98,10 @@ can store the same key→timestamp map and the front end barely changes.
 ## Notes & decisions
 
 - **Privacy:** the plan contains personal details (devotion times, weight,
-  family schedule), so the site name includes a non-guessable suffix and the
-  repo is private. Real password protection is a Netlify paid feature; rename
-  the site in the Netlify dashboard any time.
+  family schedule). The repo is private and the page sends `noindex, nofollow`,
+  but the URL itself is unauthenticated — anyone who has it can view the plan.
+  Real password protection is a Netlify paid feature; rename the site in the
+  Netlify dashboard any time.
 - **Markdown stays the plan, the site is the tracker.** Check state is NOT
   written back to the `.md` files — that's the brittle path.
 - **Noindex:** the page sends `noindex, nofollow` so search engines skip it.
