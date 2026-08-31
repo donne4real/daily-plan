@@ -1,0 +1,338 @@
+{
+  "schemaVersion": 1,
+  "generated": "2026-08-30",
+  "week": {
+    "id": "2026-08-30",
+    "label": "Aug 30 – Sep 5, 2026",
+    "startDate": "2026-08-30",
+    "planVersion": "Master Development Plan v7 (Aug 30, 2026)",
+    "context": "Project Aso Oke Week 3 — Data Collection: First Recordings · Nanodegree ongoing (P1 submitted ✅) · Sunday-free rule in effect",
+    "lookingAhead": "Week 4 (Sep 6–12): data push toward the 50% mid-gate (Sep 12) — new recording sessions, transcribe, cap religious content at 5%, audio QA. Full week-by-week breakdown in SEPTEMBER_2026_PLAN.md."
+  },
+  "days": [
+    {
+      "date": "2026-08-30",
+      "label": "Sun Aug 30",
+      "dow": 0,
+      "special": "free",
+      "callout": {
+        "title": "⚠️ One thing to decide today: the Sunday / Day-1 conflict",
+        "body": "Aso Oke's week runs Sun→Sat, so every week's first task lands on the plan's zero-exception free day — and today that task is a full recording session (speaker, quiet room, consent), not a 5-minute job. Quietly repeating the Aug 23 precedent isn't \"zero exceptions\" — it's a standing exception nobody chose. Pick deliberately:",
+        "options": [
+          {
+            "label": "Option A — short session today",
+            "detail": "Time-boxed 5:30–6:30 PM, borrowed from the home-projects evening slot rather than family/church time. Sunday stays mostly free, not entirely free."
+          },
+          {
+            "label": "Option B — fully free today (the plan's recommendation)",
+            "detail": "Shift Day 22 into Saturday's 2–5 PM Aso Oke block (or next Saturday). No gate depends on the recording happening today — the only hard date is the Day 28 checkpoint, Sat Sep 5. This is the only option that actually honors \"zero exceptions.\""
+          }
+        ]
+      },
+      "tasks": [
+        {
+          "id": "d22-recording",
+          "title": "Day 22 — First recording session (1–2 speakers)",
+          "detail": "Quiet room, consent signed first. Record reading scripts + brief conversation. Save WAV 16kHz mono.",
+          "when": "5:30–6:30 PM",
+          "sort": "17:30",
+          "category": "project",
+          "emoji": "🎙️",
+          "conditional": "Only if Option A"
+        }
+      ]
+    },
+    {
+      "date": "2026-08-31",
+      "label": "Mon Aug 31",
+      "dow": 1,
+      "tasks": [
+        {
+          "id": "weigh-in",
+          "title": "Weigh-in",
+          "detail": "Target: 195 → 180–183 lbs by Dec 31.",
+          "when": "4:00 AM",
+          "sort": "04:00",
+          "category": "health",
+          "emoji": "⚖️"
+        },
+        {
+          "id": "d23b-madlad",
+          "title": "Day 23b — RERUN: MADLAD-400 baseline for real",
+          "detail": "Closes a real gap: Week 1 actually ran NLLB (now retired — license-blocked for commercialization). The Phase 1 gate (MADLAD-400 BLEU ≥20) is unverified until this runs. Self-contained cell already in the Weeks 2–3 runbook notebook. ~5 min active + 30–60 min unattended GPU. If BLEU <20 in either direction → apply the 10B-promotion rule now, not at Week 8.",
+          "when": "Kick off first thing",
+          "sort": "06:00",
+          "category": "project",
+          "emoji": "🔁",
+          "flag": "rerun"
+        },
+        {
+          "id": "d23-convert",
+          "title": "Day 23 — Convert + organize audio files",
+          "detail": "Normalize to 16kHz mono WAV, SPK01_R01.wav-style names, Studio persistent storage.",
+          "when": "8:00–9:00 PM",
+          "sort": "20:00",
+          "category": "project",
+          "emoji": "🔧"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-01",
+      "label": "Tue Sep 1",
+      "dow": 2,
+      "tasks": [
+        {
+          "id": "d24-transcribe",
+          "title": "Day 24 — Start transcription",
+          "detail": "Kick off Whisper large-v3 draft-transcript run. ~$10 transcription-labor cost — log it in the Cost Tracker.",
+          "when": "Lunch / pre-evening window",
+          "sort": "12:10",
+          "category": "project",
+          "emoji": "📝"
+        },
+        {
+          "id": "d24b-funnel",
+          "title": "Day 24b — User acquisition: map the funnel",
+          "detail": "No code. How does a Yoruba speaker in Lagos find this, trust it, come back? At least 2 non-organic paths identified.",
+          "when": "Lunch / pre-evening window",
+          "sort": "12:15",
+          "category": "project",
+          "emoji": "🧭"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-02",
+      "label": "Wed Sep 2",
+      "dow": 3,
+      "tasks": [
+        {
+          "id": "d25-text",
+          "title": "Day 25 — Text: wikimedia + GlobalVoices (en-yo, OPUS)",
+          "detail": "License-audit each source before use. Recheck domain balance.",
+          "when": "Lunch — or defer to Sat",
+          "sort": "12:10",
+          "category": "project",
+          "emoji": "📚"
+        },
+        {
+          "id": "databricks-start",
+          "title": "Databricks Fundamentals Accreditation — start it",
+          "detail": "Window opens today. 4 hrs total, due by Sep 8. Don't let it slide unstarted into next week's crunch.",
+          "when": "Any spare block",
+          "sort": "12:15",
+          "category": "career",
+          "emoji": "🏅"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-03",
+      "label": "Thu Sep 3",
+      "dow": 4,
+      "tasks": [
+        {
+          "id": "d26-validators",
+          "title": "Day 26 — Validators: one polite reminder",
+          "detail": "To non-responders. Aim ≥5 confirmations (33% of the 15-target).",
+          "when": "Anytime · 5 min",
+          "category": "project",
+          "emoji": "📮"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-04",
+      "label": "Fri Sep 4",
+      "dow": 5,
+      "tasks": [
+        {
+          "id": "d27-spotcheck",
+          "title": "Day 27 — Spot-check transcript quality",
+          "detail": "3 clips: Whisper draft vs. human-corrected. >20% word change on any clip = flag as a risk.",
+          "when": "8:00–9:00 PM",
+          "sort": "20:00",
+          "category": "project",
+          "emoji": "🔍"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-05",
+      "label": "Sat Sep 5",
+      "dow": 6,
+      "tasks": [
+        {
+          "id": "sat-daughter",
+          "title": "Daughter time",
+          "when": "10:00 AM–12:00 PM",
+          "sort": "10:00",
+          "category": "family",
+          "emoji": "👧"
+        },
+        {
+          "id": "d22-recording-sat",
+          "title": "Day 22 — First recording session (moved here by Option B)",
+          "detail": "Quiet room, consent signed first. Record reading scripts + brief conversation. Save WAV 16kHz mono.",
+          "when": "Inside the 2–5 PM block",
+          "sort": "14:00",
+          "category": "project",
+          "emoji": "🎙️",
+          "conditional": "Only if Option B"
+        },
+        {
+          "id": "d28-checkpoint",
+          "title": "Day 28 — HARD AUDIO CHECKPOINT",
+          "detail": "≥5 clean transcribed+QA'd hours required. Real-world signal: FLEURS alone already has 10.03h (~2x margin over the floor), so it very likely passes on volume — the actual risk is whether Days 24/27 transcription+QA kept pace, not raw hours.",
+          "when": "2:00–5:00 PM",
+          "sort": "14:10",
+          "category": "project",
+          "emoji": "🏁",
+          "flag": "hard"
+        },
+        {
+          "id": "sat-home",
+          "title": "Home project",
+          "when": "5:30–7:30 PM",
+          "sort": "17:30",
+          "category": "home",
+          "emoji": "🛠️"
+        },
+        {
+          "id": "weekly-review",
+          "title": "Weekly review",
+          "detail": "Aso Oke status (esp. Day 28 checkpoint result) · Nanodegree progress · 3 goals for next week · obstacles.",
+          "when": "7:30–8:00 PM",
+          "sort": "19:30",
+          "category": "review",
+          "emoji": "📋"
+        },
+        {
+          "id": "databricks-ahead",
+          "title": "Work ahead on Databricks accreditation",
+          "when": "If time allows",
+          "category": "career",
+          "emoji": "🏅",
+          "conditional": "Only if Option A chosen"
+        }
+      ]
+    }
+  ],
+  "standingDailies": [
+    {
+      "id": "devotion",
+      "title": "Devotion — Bible Recap + ACTS prayer · 2 Tim 2 memorization: vv. 4–6 this week",
+      "when": "4:00–5:15 AM",
+      "sort": "04:00",
+      "days": [0, 1, 2, 3, 4, 5, 6],
+      "category": "faith",
+      "emoji": "📖"
+    },
+    {
+      "id": "cardio",
+      "title": "Cardio + audiobook (toward 80+ sessions)",
+      "when": "5:15–5:45 AM",
+      "sort": "05:15",
+      "days": [0, 1, 2, 3, 4, 5, 6],
+      "category": "health",
+      "emoji": "🏃"
+    },
+    {
+      "id": "wofbec",
+      "title": "WOFBEC sermon — target: all messages by Sep 30 (last full week before that deadline gets close)",
+      "when": "7:20–7:45 AM commute",
+      "sort": "07:20",
+      "days": [1, 2, 3, 4, 5],
+      "category": "faith",
+      "emoji": "🎧"
+    },
+    {
+      "id": "nanodegree",
+      "title": "Nanodegree — ongoing coursework",
+      "when": "12:00–1:00 PM",
+      "sort": "12:00",
+      "days": [1, 2, 3, 4, 5],
+      "category": "learn",
+      "emoji": "🎓"
+    },
+    {
+      "id": "church",
+      "title": "Midweek church (non-negotiable)",
+      "when": "6:00–8:00 PM",
+      "sort": "18:00",
+      "days": [3],
+      "category": "faith",
+      "emoji": "⛪"
+    },
+    {
+      "id": "derek-prince",
+      "title": "Derek Prince Video Bible School",
+      "when": "8:00–9:00 PM",
+      "sort": "20:00",
+      "days": [2, 4],
+      "category": "faith",
+      "emoji": "📺"
+    },
+    {
+      "id": "french-anki",
+      "title": "French (Lingopie 15 min) + Anki 10 min — ~16 new cards/week (9 French + 7 English)",
+      "when": "9:00–9:30 PM",
+      "sort": "21:00",
+      "days": [0, 1, 2, 3, 4, 5, 6],
+      "category": "learn",
+      "emoji": "🇫🇷"
+    }
+  ],
+  "adminItems": [
+    {
+      "id": "admin-50users",
+      "title": "Sign 50-USERS-DEFINITION.md",
+      "detail": "One week overdue from the Aug 23 review, still unsigned. Location: D:\\leyea\\OneDrive\\Documents\\aso-oke-project\\50-USERS-DEFINITION.md",
+      "category": "admin",
+      "emoji": "✍️",
+      "flag": "overdue"
+    },
+    {
+      "id": "admin-dates",
+      "title": "Pin down two dates",
+      "detail": "Exact FedCash date (confirmed NOT Sep 20–30, but still worth pinning) · Nanodegree final-project due date (still unknown — matters most if it lands Nov 15–29).",
+      "category": "admin",
+      "emoji": "📅"
+    },
+    {
+      "id": "admin-fr5",
+      "title": "FR5 — nothing new; October, lower priority",
+      "detail": "Revisit in a few weeks.",
+      "category": "admin",
+      "emoji": "🧾"
+    }
+  ],
+  "deadlines": [
+    {
+      "date": "2026-09-02",
+      "label": "Databricks Fundamentals Accreditation window opens",
+      "severity": "info"
+    },
+    {
+      "date": "2026-09-05",
+      "label": "Day 28 — HARD AUDIO CHECKPOINT: ≥5 clean transcribed+QA'd hours",
+      "severity": "hard"
+    },
+    {
+      "date": "2026-09-08",
+      "label": "Databricks Fundamentals Accreditation due (4 hrs total)",
+      "severity": "hard"
+    }
+  ],
+  "reminders": [
+    "Any Project Aso Oke spend → Cost Tracker same day. $300 alert / $400 hard ceiling (raised from $225/$300 on Aug 30).",
+    "Weekly review Sat 7:30 PM: Aso Oke status (esp. Day 28 result) · Nanodegree progress · 3 goals for next week · obstacles.",
+    "Weigh-in Monday 4:00 AM — 195 → 180–183 lbs by Dec 31."
+  ],
+  "risks": [
+    "The Sunday conflict is genuinely undecided — the first week it's mattered enough to flag properly rather than quietly break the rule again.",
+    "Day 28's real risk is transcription throughput, not audio volume. FLEURS already clears the ≥5h floor with ~2x margin — if the checkpoint is at risk, it'll be because Days 24/27 didn't keep pace. Watch that, not the hour count.",
+    "Databricks Fundamentals Accreditation (4 hrs) opens Wed Sep 2, due Sep 8 — it starts inside this week and finishes next. Don't let it slide unstarted into next week's crunch."
+  ]
+}

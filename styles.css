@@ -1,0 +1,392 @@
+:root {
+  --bg: #0d1117;
+  --bg-soft: #11161d;
+  --card: #161d27;
+  --card-edge: #232d3b;
+  --text: #e4e8ee;
+  --text-dim: #8b96a5;
+  --text-faint: #5d6878;
+  --accent: #4c8dff;
+  --danger: #e5534b;
+  --warn: #d29922;
+  --good: #3fb950;
+  --info: #58a6ff;
+
+  --cat-faith: #9d8cff;
+  --cat-health: #3fb950;
+  --cat-learn: #58a6ff;
+  --cat-project: #d29922;
+  --cat-career: #39c5cf;
+  --cat-family: #ec6aa0;
+  --cat-home: #c08a3e;
+  --cat-review: #8b96a5;
+  --cat-admin: #e5534b;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: #f3f5f8;
+    --bg-soft: #eaeef3;
+    --card: #ffffff;
+    --card-edge: #dde3eb;
+    --text: #1c2430;
+    --text-dim: #5a6572;
+    --text-faint: #8b96a5;
+    --accent: #2266cc;
+    --danger: #cf3f38;
+    --warn: #a87815;
+    --good: #2c8a43;
+    --info: #2266cc;
+
+    --cat-faith: #7a63e8;
+    --cat-health: #2c8a43;
+    --cat-learn: #2266cc;
+    --cat-project: #a87815;
+    --cat-career: #159aa5;
+    --cat-family: #d14e86;
+    --cat-home: #a06a28;
+    --cat-review: #5a6572;
+    --cat-admin: #cf3f38;
+  }
+}
+
+* { box-sizing: border-box; }
+
+html { color-scheme: dark light; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 15.5px;
+  line-height: 1.45;
+  min-height: 100vh;
+}
+
+/* ---------- Top bar ---------- */
+
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--card-edge);
+}
+
+.topbar-inner {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.brand { display: flex; align-items: center; gap: 8px; font-weight: 650; font-size: 16px; }
+
+.tabs { display: flex; background: var(--bg-soft); border: 1px solid var(--card-edge); border-radius: 10px; padding: 3px; }
+
+.tab {
+  border: 0;
+  background: transparent;
+  color: var(--text-dim);
+  font: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 5px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.tab.active { background: var(--accent); color: #fff; }
+.tab:not(.active):hover { color: var(--text); }
+
+/* ---------- Layout ---------- */
+
+.app {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 20px 16px 48px;
+}
+
+.footer {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 16px 32px;
+  color: var(--text-faint);
+  font-size: 12.5px;
+  text-align: center;
+}
+
+/* ---------- Cards ---------- */
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--card-edge);
+  border-radius: 14px;
+  padding: 16px 18px;
+  margin-bottom: 14px;
+}
+
+.card-title {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-faint);
+  margin: 0 0 10px;
+}
+
+/* ---------- Today header ---------- */
+
+.day-header { display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: 4px; margin-bottom: 2px; }
+
+.day-title { font-size: 24px; font-weight: 700; margin: 0; }
+
+.day-sub { color: var(--text-dim); font-size: 13.5px; margin: 4px 0 0; }
+
+.chip {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  padding: 3px 9px;
+  border-radius: 999px;
+  border: 1px solid var(--card-edge);
+  color: var(--text-dim);
+  background: var(--bg-soft);
+  white-space: nowrap;
+}
+
+.chip.free { color: var(--good); border-color: color-mix(in srgb, var(--good) 45%, var(--card-edge)); }
+
+/* ---------- Progress ---------- */
+
+.progress-row { display: flex; align-items: center; gap: 10px; margin-top: 12px; }
+
+.progress-track { flex: 1; height: 7px; background: var(--bg-soft); border-radius: 999px; overflow: hidden; }
+
+.progress-fill { height: 100%; width: 0; background: var(--good); border-radius: 999px; transition: width 0.25s ease; }
+
+.progress-label { font-size: 13px; font-weight: 650; color: var(--text-dim); min-width: 52px; text-align: right; }
+
+.progress-label.all-done { color: var(--good); }
+
+/* ---------- Deadline banners ---------- */
+
+.deadline {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border-radius: 12px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.deadline.hard { background: color-mix(in srgb, var(--danger) 14%, var(--card)); border: 1px solid color-mix(in srgb, var(--danger) 55%, transparent); color: var(--text); }
+.deadline.info { background: color-mix(in srgb, var(--info) 12%, var(--card)); border: 1px solid color-mix(in srgb, var(--info) 45%, transparent); }
+
+.deadline .when-pill {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 3px 8px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.deadline.hard .when-pill { background: var(--danger); color: #fff; }
+.deadline.info .when-pill { background: var(--info); color: #fff; }
+
+.deadline.today-outline { outline: 2px solid var(--warn); }
+
+/* ---------- Callout (decision box) ---------- */
+
+.callout {
+  border: 1px solid color-mix(in srgb, var(--warn) 55%, transparent);
+  background: color-mix(in srgb, var(--warn) 10%, var(--card));
+  border-radius: 14px;
+  padding: 16px 18px;
+  margin-bottom: 14px;
+}
+
+.callout h3 { margin: 0 0 8px; font-size: 15.5px; }
+.callout p { margin: 0 0 12px; color: var(--text-dim); font-size: 14px; }
+
+.callout-options { display: grid; gap: 8px; }
+
+.callout-option {
+  background: var(--card);
+  border: 1px solid var(--card-edge);
+  border-radius: 10px;
+  padding: 10px 12px;
+  font-size: 13.5px;
+}
+
+.callout-option .opt-label { font-weight: 700; display: block; margin-bottom: 2px; }
+.callout-option .opt-detail { color: var(--text-dim); }
+
+/* ---------- Task list ---------- */
+
+.task-list { display: grid; gap: 8px; }
+
+.task {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 11px 12px;
+  border: 1px solid var(--card-edge);
+  border-radius: 12px;
+  background: var(--bg-soft);
+}
+
+.task.conditional { border-style: dashed; opacity: 0.88; }
+.task.done { opacity: 0.55; }
+.task.done .task-title { text-decoration: line-through; text-decoration-color: var(--text-faint); }
+
+.task-check {
+  flex: none;
+  width: 21px;
+  height: 21px;
+  margin-top: 2px;
+  border-radius: 7px;
+  border: 2px solid var(--text-faint);
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+  display: grid;
+  place-items: center;
+  color: transparent;
+  font-size: 13px;
+  line-height: 1;
+  transition: all 0.12s ease;
+}
+
+.task-check:hover { border-color: var(--accent); }
+
+.task.done .task-check { background: var(--good); border-color: var(--good); color: #fff; }
+
+.task-body { flex: 1; min-width: 0; }
+
+.task-top { display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; }
+
+.task-emoji { flex: none; }
+
+.task-title { font-weight: 620; font-size: 14.5px; }
+
+.task-when { font-size: 11.5px; font-weight: 700; color: var(--text-faint); white-space: nowrap; }
+
+.task-detail { color: var(--text-dim); font-size: 13px; margin-top: 3px; }
+
+.tag {
+  display: inline-block;
+  font-size: 10.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 2px 7px;
+  border-radius: 6px;
+  color: #fff;
+  white-space: nowrap;
+}
+
+.tag.hard { background: var(--danger); }
+.tag.rerun { background: var(--warn); color: #1c1c1c; }
+.tag.overdue { background: var(--danger); }
+.tag.conditional { background: var(--bg-soft); color: var(--text-dim); border: 1px solid var(--card-edge); }
+
+.cat-dot {
+  flex: none;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-top: 8px;
+}
+
+/* ---------- Sections ---------- */
+
+.section-gap { margin-top: 20px; }
+
+/* ---------- Week view ---------- */
+
+.week-context { color: var(--text-dim); font-size: 14px; margin: 0; }
+
+.week-day { padding: 0; overflow: hidden; }
+
+.week-day summary {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 16px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.week-day summary::-webkit-details-marker { display: none; }
+.week-day summary:hover { background: var(--bg-soft); }
+
+.week-day.today-card { border-color: color-mix(in srgb, var(--accent) 60%, var(--card-edge)); }
+
+.week-day-label { font-weight: 700; font-size: 15px; flex: 1; }
+
+.week-day-count { font-size: 12.5px; font-weight: 650; color: var(--text-dim); }
+.week-day-count.all-done { color: var(--good); }
+
+.week-day-body { padding: 4px 14px 14px; border-top: 1px solid var(--card-edge); }
+.week-day-body .task-list { padding-top: 10px; }
+
+.week-day .callout { margin: 12px 2px 2px; }
+
+.day-note { color: var(--text-dim); font-size: 13px; margin: 8px 2px 0; }
+
+.risk-list { margin: 0; padding-left: 18px; color: var(--text-dim); font-size: 13.5px; }
+.risk-list li { margin-bottom: 6px; }
+
+.reminder-list { margin: 0; padding-left: 18px; color: var(--text-dim); font-size: 13.5px; }
+.reminder-list li { margin-bottom: 6px; }
+
+.looking-ahead { color: var(--text-dim); font-size: 13.5px; margin: 0; }
+
+/* ---------- Notices ---------- */
+
+.notice {
+  border: 1px solid color-mix(in srgb, var(--warn) 50%, transparent);
+  background: color-mix(in srgb, var(--warn) 10%, var(--card));
+  border-radius: 14px;
+  padding: 16px 18px;
+  font-size: 14.5px;
+}
+
+.notice h3 { margin: 0 0 6px; font-size: 15.5px; }
+.notice p { margin: 0; color: var(--text-dim); }
+
+/* ---------- Buttons ---------- */
+
+.btn {
+  border: 1px solid var(--card-edge);
+  background: var(--bg-soft);
+  color: var(--text);
+  font: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 7px 16px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.btn:hover { border-color: var(--accent); }
+
+/* ---------- Small screens ---------- */
+
+@media (max-width: 480px) {
+  .day-title { font-size: 20px; }
+  .app { padding: 14px 10px 40px; }
+  .card { padding: 14px; border-radius: 12px; }
+}

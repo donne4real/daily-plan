@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Daily Plan</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📋</text></svg>">
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">
+        <span class="brand-mark">📋</span>
+        <span class="brand-text">Daily Plan</span>
+      </div>
+      <nav class="tabs" id="tabs">
+        <button class="tab active" data-tab="today">Today</button>
+        <button class="tab" data-tab="week">Week</button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="app" class="app">
+    <div class="card loading">Loading plan…</div>
+  </main>
+
+  <footer class="footer" id="footer"></footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

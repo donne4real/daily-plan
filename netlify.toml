@@ -1,0 +1,9 @@
+[build]
+  publish = "."
+  command = "node scripts/validate.js"
+
+# Weekly data updates should show immediately, not from cache.
+[[headers]]
+  for = "/data/*"
+  [headers.values]
+    Cache-Control = "no-cache"
