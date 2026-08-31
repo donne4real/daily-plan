@@ -5,7 +5,9 @@ Development Plan folder) into a daily cockpit: a **Today** view (deadlines,
 decision callouts, the day's tasks + standing dailies, admin items) and a
 **Week** view. Checkmarks persist in the browser via `localStorage`.
 
-- **Live:** deployed on Netlify (see URL in the Netlify dashboard)
+- **Live:** https://daily-plan-9086a0.netlify.app
+- **Repo:** https://github.com/donne4real/daily-plan (private)
+- **Netlify admin:** https://app.netlify.com/projects/daily-plan-9086a0
 - **Data:** `data/tasks.json` — the single source of truth for the site
 - **No framework, no build step** — plain HTML/CSS/JS; Netlify only runs the
   validator at deploy time
